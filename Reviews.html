@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html> 
+    <head> 
+        <title>Reviews</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="manifest" href="/manifest.json">
+    </head>
+    <body>
+        <img src="banner.png", height="200", class="banner">
+        <main> <!--another layer inside the body for freedom purposes-->
+            <nav> <!--another layer inside the body this one is for the navigation menu at the top-->
+
+            </nav>
+            <div class="sidebar">
+                <a href="index.html">Index</a>
+                <p class="deadl">Reviews</p>
+                <a href="Tierlist.html">Tierlist</a> 
+                <a href="Content.html">About</a>
+            </div>
+            <div class="box">
+            <div class="text">
+                <h1>Reviews</h1>
+                <p>
+                    <img src="hades.png" style="height: 200px; float: right;"><span style="vertical-align: middle;"></span>
+                    <h2>Hades</h2>
+                    <ul>
+                        <li>Roguelite</li>
+                        <li>X and Y</li>
+                        <li>8/10</li>
+                    </ul>
+                    <p>Your rating is: <span id="ratinghades"><label><input id="hadesn" type="range" min="0" max="10" step="1"></label></span>/10</p> 
+                    <button id="rehades">Submit</button>
+
+                    <script>
+                        function hadesr() {
+                            
+                            document.getElementByid("ratinghades").textcontent = document.getElementById("hadesn").value;
+                            document.getElementById("rehades").style.display = "none";
+                        }
+                        document.getElementById("rehades").onclick = hadesr;
+                    </script>
+                    <p>very gud</p>
+                </p>
+                <div class="clearfix">
+                <p>
+                    <img src="tewwawia.png" style="height: 200px; float: right;"><span style="vertical-align: middle;"></span>
+                    <h2>Terraria</h2>
+                    <ul>
+                        <li>X</li>
+                        <li>Relogic</li>
+                        <li>10/10</li>
+                    </ul>
+                    <p>This game is the perfect combination of </p>
+                </p>
+                </div>
+            </div>
+            </div>
+        </main>
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+            import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+          
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            const firebaseConfig = {
+              apiKey: "AIzaSyDv-u-YmwjiowqKNXjDlwq4ULcTJzynYvI",
+              authDomain: "gamereview-74a9b.firebaseapp.com",
+              projectId: "gamereview-74a9b",
+              storageBucket: "gamereview-74a9b.firebasestorage.app",
+              messagingSenderId: "1052802871583",
+              appId: "1:1052802871583:web:3e46ccf45ccedba2fc002a",
+              measurementId: "G-9FQXJD8Z51"
+            };
+          
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const analytics = getAnalytics(app);
+          </script>
+    </body>
+</html>
